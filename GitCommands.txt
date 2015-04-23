@@ -21,4 +21,36 @@
 查看命令历史，以便确定要回到未来的哪个版本。
 9.git commit --amend --author='klingjin <klingjin@gmail.com>'
 修改已提交的author信息。
+10.配置不输入用户名和密码推送到Github
+(1)创建ssh key
+$ssh-keygen -t rsa -C "klingjin@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/king/.ssh/id_rsa): klingjin_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in klingjin_rsa.
+Your public key has been saved in klingjin_rsa.pub.
+The key fingerprint is:
+a4:1f:c8:7f:69:30:65:17:32:6b:6f:86:64:a9:1f:d0 klingjin@gmail.com
+The key's randomart image is:
++--[ RSA 2048]----+
+|          o .    |
+|         . = .   |
+|        o E .    |
+|     . + O +     |
+|      + S o +    |
+|       o = =     |
+|        o =      |
+|         o       |
+|                 |
++-----------------+
+执行完后，会生成密钥对文件：私钥klingjin_rsa和公钥klingjin_rsa.pub
+（2）添加公钥到github
+Settings --> Personal settings --> SSH keys --> Add SSH key
+（3）测试连接是否成功
+$ ssh -T git@github.com
+Hi klingjin! You've successfully authenticated, but GitHub does not provide shell access.
+（4）修改.git/config文件中的url
+old: url = https://github.com/klingjin/learngit.git
+new: url = git@github.com:klingjin/learngit.git
 
