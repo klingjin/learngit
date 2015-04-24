@@ -63,5 +63,17 @@ new: url = git@github.com:klingjin/learngit.git
 撤消暂存区的修改，重新放回到工作区。
 13.git rm <file>
 删除一个文件。
+14.git branch
+查看分支。
+  git branch <name>
+创建分支。
+  git checkout <name>
+切换分支。
+  git checkout -b <name>
+创建并切换分支。
+  git merge <name>
+合并某分支到当前分支。
+  git branch -d <name>
+删除分支。
 
 
