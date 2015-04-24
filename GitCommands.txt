@@ -8,6 +8,8 @@
 查看仓库当前的状态，可以知道有哪些文件被修改。
 5.git diff
 查看修改的内容。
+  git diff HEAD
+查看工作区与版本库中最新版本的区别。
 6.git log
 查看从最近到最远的提交日志。
 查看提交历史，以便确定要回退到哪个版本。
@@ -53,4 +55,13 @@ Hi klingjin! You've successfully authenticated, but GitHub does not provide shel
 （4）修改.git/config文件中的url
 old: url = https://github.com/klingjin/learngit.git
 new: url = git@github.com:klingjin/learngit.git
+11.git checkout -- filename
+用暂存区中filename文件来覆盖工作区中的filename文件。
+  git checkout .
+撤消工作区的全部修改，即用暂存区的所有文件直接覆盖本地工作区中的文件。
+12.git reset HEAD <file>
+撤消暂存区的修改，重新放回到工作区。
+13.git rm <file>
+删除一个文件。
+
 
