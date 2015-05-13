@@ -83,6 +83,8 @@ new: url = git@github.com:klingjin/learngit.git
 在本地创建和远程分支对应的分支
   git branch --set-upstream <branch-name> origin/<branch-name>
 建立本地分支与远程分支的联系
+  git branch -set-upstram origin <branch-name>
+将在本地创建的分支推送并关联到远程分支
 15.git stash
 暂存工作现场
    git stash list
@@ -93,5 +95,9 @@ new: url = git@github.com:klingjin/learngit.git
 恢复最近一次暂存的工作现场，但不删除暂存内容
    git stash drop
 删除最近一次暂存的工作现场
+16.git push
+   推送所有分支代码到远程对应分支上
+   git push origin <branch-name>
+   仅推送指定本地分支代码到远程对应分支上
 
 
